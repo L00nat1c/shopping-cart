@@ -38,3 +38,20 @@ function getOneById(req, res, next) {
     }
 }
 
+function deleteProduct(req, rs, next) {
+    try {
+        model.deleteProduct(req.params.id);
+        res.render("products", { prodList: model.getAll(), title: "All Products" });
+    } catch (err) {
+        console.error("Error while getting products ", err.message);
+        next(err);
+    }
+}
+
+
+module.exports = {
+    getAll,
+    getAllByOneAttribute,
+    getOneById,
+    deleteProduct
+};
