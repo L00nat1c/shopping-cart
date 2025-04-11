@@ -1,0 +1,106 @@
+header {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    background-color: aquamarine;
+    margin: 10px;
+}
+
+#page-title {
+    text-align: center;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav a {
+    float: left;
+    color: lightgray;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: greenyellow;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: greenyellow;
+    color: black;
+}
+
+.topnav a.split {
+    float: right;
+    background-color: #333;
+    color: lightgray;
+}
+
+.topnav a.split:hover {
+    color: black;
+    background-color: greenyellow;
+}
+
+.logo-img {
+    width: 75px;
+    height: 75px;
+}
+
+.nav-section {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    width: 80%;
+    background-color: khaki;
+    text-align: center;
+    padding: 10px;
+}
+
+.admin-nav-img {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.edit-sec {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: khaki;
+    border: black solid;
+    width: 90%;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#product-table {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    border: black solid;
+    text-align: center;
+    background-color: lightgray;
+}
+
+.table-stretch {
+    width: 25%;
+}
+
+th, tr, td {
+    border: black solid 1px;
+}
+
+footer {
+    background-color: lightgrey;
+    text-align: left;
+    padding: 5px;
+    position: absolute;
+    width: 98%;
+}

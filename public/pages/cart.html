@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/csc372-hw/shopping-cart-prototype/styles/shop-cart.css">
+    <title> Your Cart | The Gamer Den </title>
+    <link rel="icon" href="/csc372-hw/shopping-cart-prototype/images/logo-game-controller-b-1.png">
+</head>
+<body>
+
+    <div class="topnav">
+        <a href="index.html"> Home </a>
+        <a href="products.html"> All Products </a>
+        <a href="#"> Nintendo </a>
+        <a href="#"> PlayStation</a>
+        <a href="#"> Xbox </a>
+        <a class="split" href="#"> Profile </a>
+        <a class="split" href="cart.html"> Cart </a>
+        <a class="split" href="admin-nav.html">Temp Admin Nav</a>
+    </div>
+
+    <header>
+        <h1> <img class="logo-img" src="/csc372-hw/shopping-cart-prototype/images/logo-game-controller-b-1.png" alt="icon"> The Gamer Den 
+            <img class="logo-img" src="/csc372-hw/shopping-cart-prototype/images/logo-game-controller-b-1.png" alt="icon"></h1>
+    </header>
+
+    <h2 id="center-text">Your Shopping Cart</h2>
+
+    <div class="cart-total">
+        <h3>Subtotal: $499.97</h3>
+        <h4>Shipping: Free</h4>
+        <h4>Service Fee: Free</h4>
+        <h4>Tax: $33.75</h4>
+        <h3>Total: $533.72</h3>
+
+        <a id="checkout-but" href="#">Checkout</a>
+    </div>
+
+    <div class="your-cart">
+        <div class="cart-item">
+            <img class="prod-icon" src="https://craftbymerlin.com/cdn/shop/files/BlackMatteFront.jpg?v=1691669882" alt="Product Image">
+            <h3>Nintendo Switch OLED</h3>
+            <p>$399.99</p>
+            <label for="qty-num">Qty: </label>
+            <input type="number" id="qty-num" name="qty-num" placeholder="1">
+            <a class="remove-but" href="#">Remove</a>
+        </div>
+
+        <div class="cart-item">
+            <img class="prod-icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRFwGwQdXnqNHi3YxbOrqXRv1l1VLeP0xHww&s" alt="Product Image">
+            <h3>Nintendo Switch Joy-Con</h3>
+            <p>$99.98</p>
+            <label for="qty-num">Qty: </label>
+            <input type="number" id="qty-num" name="qty-num" placeholder="2">
+            <a class="remove-but" href="#">Remove</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p> &copy; 2025 The Gamer Den. All rights reserved.</p>
+        <p><a href="#">Contact Us</a></p>
+        <p><a href="#">Privacy Policy</a></p>
+        <p><a href="#">Terms & Conditions</a></p>
+        <p><a href="#">FAQ</a></p>
+    </footer>
+    
+</body>
+</html>
