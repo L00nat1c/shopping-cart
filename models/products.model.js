@@ -38,5 +38,6 @@ module.exports = {
     getAll,
     getAllByOneAttribute,
     getOneById,
-    deleteProduct
+    deleteProduct,
+    createNew
 };
