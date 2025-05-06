@@ -48,10 +48,33 @@ function deleteProduct(req, rs, next) {
     }
 }
 
+function createNew(req, res, next) {
+    let prodName = req.body.prodName;
+    let prodDesc = req.body.prodDesc;
+    let imgUrl = req.body.imgUrl;
+    let price = req.body.price;
+    let catId = req.body.catId;
+
+    if(prodName && prodDesc && imgUrl && price && catId) {
+        let params = [prodName, prodDesc, imgUrl, price, catId];
+        try {
+            model.createNew(params);
+            res.render("products", { prodList: model.getAll(), title: "All Products"});
+        } catch (err) {
+            console.error("Error while creating product: ", err.message);
+            next(err);
+        }
+    }
+    else {
+        res.status(400).send("Invalid Request");
+    }
+}
+
 
 module.exports = {
     getAll,
     getAllByOneAttribute,
     getOneById,
-    deleteProduct
+    deleteProduct,
+    createNew
 };
