@@ -12,6 +12,6 @@ router.get("/:id", prodController.getOneById);
 
 router.delete("/delete/:id", prodController.deleteGame)
 
-router.post("/add", gamesController.createNew);
+router.post("/add", prodController.createNew);
 
 module.exports = router;
