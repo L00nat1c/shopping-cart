@@ -17,14 +17,20 @@ function getAllByOneAttribute(attribute, value) {
 }
 
 function getOneById() {
-    let sql = "SELECT * FROM Products WHERE id = ? ;";
+    let sql = "SELECT * FROM Products WHERE prodId = ? ;";
     const item = db.get(sql, id);
     return item;
 }
 
 function deleteProduct(id) {
-    let sql = "DELETE FROM Products WHERE id = ? ;";
+    let sql = "DELETE FROM Products WHERE prodId = ? ;";
     const info = db.run(sql, id);
+    return info;
+}
+
+function createNew(params) {
+    let sql = "INSERT INTO products " + "VALUES(?, ?, ?, ?, ?); ";
+    const info = db.run(sql, params);
     return info;
 }
 
