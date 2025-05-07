@@ -9,7 +9,7 @@ app.use(multer().none());
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 
-const prodRoutes = require("./routes/products.routes");
+const prodRoutes = require("./routes/products.route");
 const { db_close } = require("./models/db-conn");
 
 app.use(express.static("public"));

@@ -30,15 +30,15 @@ function getAllByOneAttribute(req, res, next) {
 
 function getOneById(req, res, next) {
     try {
-        let prod = model.getOneById(req.params.id);
-        res.render("product-details", { prod: prod, title: 'Product #' + req.params.id});
+        let prod = model.getOneById(req.params.prodId);
+        res.render("product-details", { prod: prod, title: 'Product #' + req.params.prodId});
     } catch (err) {
         console.error("Error while getting products ", err.message);
         next(err);
     }
 }
 
-function deleteProduct(req, rs, next) {
+function deleteProduct(req, res, next) {
     try {
         model.deleteProduct(req.params.id);
         res.render("products", { prodList: model.getAll(), title: "All Products" });

@@ -2,7 +2,7 @@
 const db = require("./db-conn");
 
 function getAll() {
-    let sql = "SELECT * FROM Products;";
+    let sql = "SELECT * FROM products;";
     const data = db.all(sql, value);
     return data;
 }
@@ -10,20 +10,20 @@ function getAll() {
 function getAllByOneAttribute(attribute, value) {
     const validColumns = getColumnNames();
     if(validColumns.incudes(attribute)) {
-        let sql = "SELECT * FROM Products WHERE " + attribute + "=? ;";
+        let sql = "SELECT * FROM products WHERE " + attribute + "=? ;";
         const data = db.all(sql, value);
         return data;
     }
 }
 
 function getOneById() {
-    let sql = "SELECT * FROM Products WHERE prodId = ? ;";
+    let sql = "SELECT * FROM products WHERE prodId = ? ;";
     const item = db.get(sql, id);
     return item;
 }
 
 function deleteProduct(id) {
-    let sql = "DELETE FROM Products WHERE prodId = ? ;";
+    let sql = "DELETE FROM products WHERE prodId = ? ;";
     const info = db.run(sql, id);
     return info;
 }
@@ -38,5 +38,6 @@ module.exports = {
     getAll,
     getAllByOneAttribute,
     getOneById,
-    deleteProduct
+    deleteProduct,
+    createNew
 };

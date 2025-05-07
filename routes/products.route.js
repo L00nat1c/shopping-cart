@@ -10,7 +10,7 @@ router.get("/", prodController.getAllByOneAttribute);
 
 router.get("/:id", prodController.getOneById);
 
-router.delete("/delete/:id", prodController.deleteGame)
+router.delete("/delete/:id", prodController.deleteProduct);
 
 router.post("/add", prodController.createNew);
 
